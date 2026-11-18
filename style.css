@@ -1,0 +1,71 @@
+@font-face {
+  font-family: Archivo;
+  src: url("/fonts/Archivo-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
+
+:root {
+  --ink: #15192b;
+  --cobalt: #2f45ff;
+  --porcelain: #eef1f5;
+  --muted: #5b6175;
+  --soft: #b9c0ce;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Archivo, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--porcelain);
+}
+
+a { color: var(--cobalt); text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+header.top { background: var(--ink); color: var(--white); }
+header.top .wrap { padding-top: 28px; padding-bottom: 56px; }
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--white); text-decoration: none;
+  font-weight: 800; font-stretch: 125%; font-size: 22px;
+}
+.brand img { width: 30px; height: 30px; }
+
+h1 {
+  margin: 48px 0 12px;
+  font-size: clamp(40px, 9vw, 64px);
+  line-height: 1.02;
+  font-weight: 800;
+  font-stretch: 118%;
+  letter-spacing: -0.01em;
+}
+.lede { margin: 0; max-width: 34em; font-size: 19px; color: var(--soft); }
+.soon {
+  display: inline-block; margin-top: 28px; padding: 12px 22px;
+  border-radius: 999px; background: var(--cobalt); color: var(--white);
+  font-weight: 700;
+}
+
+main .wrap { padding-top: 40px; padding-bottom: 48px; }
+
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.facts li { background: var(--white); border-radius: 20px; padding: 18px 20px; }
+.facts strong { display: block; font-size: 19px; font-stretch: 112%; }
+.facts span { color: var(--muted); }
+
+h2 { margin: 40px 0 8px; font-size: 26px; font-weight: 800; font-stretch: 112%; line-height: 1.2; }
+.policy h2 { font-size: 22px; margin-top: 36px; }
+.policy li { margin: 6px 0; }
+.meta { color: var(--muted); font-size: 15px; }
+
+footer { color: var(--muted); font-size: 15px; }
+footer .wrap { padding-top: 8px; padding-bottom: 40px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
