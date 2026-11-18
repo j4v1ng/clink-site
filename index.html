@@ -27,8 +27,8 @@
         <li><strong>English and Spanish</strong><span>Dollars, euros or pounds, with the tips people expect where you are.</span></li>
       </ul>
 
-      <h2>Support</h2>
-      <p>Questions or a receipt Clink couldn’t read? Write to <a href="mailto:support@geyser-iis.com">support@geyser-iis.com</a>.</p>
+      <h2 id="support">Support</h2>
+      <p>Questions or a receipt Clink couldn’t read? <a class="mail" href="/#support" data-user="support" data-domain="geyser-iis.com">Email us</a>.</p>
     </div>
   </main>
 
@@ -38,5 +38,9 @@
       <a href="/privacy/">Privacy policy</a>
     </div>
   </footer>
+  <script>
+    // The address is put together here, so it isn't in the page for spam robots to collect.
+    for (const a of document.querySelectorAll("a.mail")) a.href = "mailto:" + a.dataset.user + "@" + a.dataset.domain;
+  </script>
 </body>
 </html>
