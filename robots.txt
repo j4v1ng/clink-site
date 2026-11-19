@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clink.geyser-iis.com/sitemap.xml
